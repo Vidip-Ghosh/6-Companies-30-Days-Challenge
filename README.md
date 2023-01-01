@@ -15,4 +15,9 @@
     <td>Microsoft</td>
     <td><a href="https://leetcode.com/problems/combination-sum-iii/description/">Combination Sum III</td>
   </tr>
+  <tr>
+    <td>1</td>
+    <td>Microsoft</td>
+    <td><a href="https://leetcode.com/problems/bulls-and-cows/description/">Bulls and Cows</td>
+  </tr>
 </table>
