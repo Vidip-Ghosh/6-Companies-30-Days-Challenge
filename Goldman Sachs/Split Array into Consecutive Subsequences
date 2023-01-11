@@ -1,0 +1,41 @@
+class Solution {
+public:
+    bool isPossible(vector<int>& nums) {
+        
+        int n = nums.size();
+        unordered_map<int,int> count;
+        unordered_map<int,int> end;
+        
+        // store the frequency of each element in count map
+        
+        for(int i: nums)
+        {
+            count[i]++;
+        }
+        
+        for(int n: nums)
+        {
+            if(count[n]==0)
+            {
+                continue;
+            }
+            count[n]--;
+            if(end[n-1] > 0)
+            {
+                end[n-1]--;
+                end[n]++;
+            }
+            else if(count[n+1]>0 && count[n+2]>0)
+            {
+                count[n+1]--;
+                count[n+2]--;
+                end[n+2]++;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+};
